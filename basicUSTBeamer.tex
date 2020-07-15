@@ -1,0 +1,73 @@
+% \documentclass[aspectratio=1620, xcolor=table, handouts]{beamer}
+\documentclass[aspectratio=169, xcolor=table, handouts]{beamer}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{cancel}
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+%% NYU COLORS %%
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+\usetheme{Madrid}
+\usecolortheme{beaver} %seagull %beaver %dove
+\definecolor{nyuviolet}{RGB}{87, 6, 140}
+\definecolor{ustgold}{RGB}{153, 102, 0}
+% \definecolor{ustgold}{cmyk}{40, 50, 100, 0}
+\definecolor{ustblue}{RGB}{0, 51, 102}
+
+\setbeamercolor{alerted text}{fg=nyuviolet}
+\setbeamercolor{example text}{fg=darkgray}
+
+\setbeamercolor*{palette primary}{fg=ustblue!60!black,bg=gray!30!white}
+\setbeamercolor*{palette secondary}{fg=ustblue,bg=ustgold} %subsection
+\setbeamercolor*{palette tertiary}{fg=ustgold,bg=ustblue} %section
+\setbeamercolor*{palette quaternary}{fg=ustblue,bg=gray!5!white}
+\setbeamercolor{title}{fg=ustblue}         %Title of presentation
+\setbeamercolor{section title}{fg=ustgold, bg=ustblue}
+\setbeamercolor{subsection title}{fg=ustgold, bg=gray}
+\setbeamercolor{frametitle}{fg=ustblue, bg=lightgray}
+% set the blocks to match the beaver colors:
+\setbeamercolor{structure}{fg=ustgold}
+% inside the blocks to grey:
+\setbeamercolor{block body}{bg=gray!10!white}
+
+% no navigation icons:
+\usenavigationsymbolstemplate{}
+
+
+
+
+\author[Morris]{Another Author \inst{1} \and Arthur Morris \inst{2}}
+\title{Example Presentation}
+\institute[HKUST]{\inst{1} Another Business School, Another University \and \inst{2} The Hong Kong University of Science and Technology }
+\titlegraphic{\includegraphics[scale=.15]{../ustlogos/UST_C3.jpg}} %TODO download one that aint so shitty
+\logo{\includegraphics[scale=.2]{../ustlogos/UST_L2.jpg}}
+\date{}
+
+\begin{document}
+
+\addtocounter{framenumber}{-1}
+% TITLE PAGE:
+{
+\setbeamertemplate{logo}{}%takes the logo off the THIS page
+\begin{frame}[plain] %takes the redundant footer off the bottom of the title slide.
+\maketitle
+\end{frame}
+}
+
+\frame{
+	\frametitle{A regular slide}
+Some enlightening text
+\begin{itemize}
+	\item A bullet point
+	\item A second bullet point
+\end{itemize}
+}
+
+\end{document}
